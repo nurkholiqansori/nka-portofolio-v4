@@ -3,14 +3,33 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "type-check": "tsc"
   },
   "dependencies": {
-    "gsap": "^3.0.1",
+    "@arwes/animation": "^1.0.0-alpha.19",
+    "@arwes/core": "^1.0.0-alpha.19",
+    "@arwes/design": "^1.0.0-alpha.19",
+    "@arwes/sounds": "^1.0.0-alpha.19",
+    "@emotion/css": "11",
+    "@emotion/react": "11",
+    "animejs": "3",
+    "framer-motion": "^7.5.1",
+    "gsap": "^3.11.2",
+    "howler": "2.2",
     "next": "latest",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-transition-group": "^4.3.0",
-    "sass": "1.29.0"
+    "polished": "4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-transition-group": "^4.4.5",
+    "simple-icons": "^7.13.0"
+  },
+  "devDependencies": {
+    "@types/animejs": "3",
+    "@types/howler": "2.2",
+    "@types/node": "18.7.23",
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
+    "typescript": "^4.8.4"
   }
 }

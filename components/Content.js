@@ -15,7 +15,7 @@ const Content = () => {
   }, [line1])
 
   return (
-    <p ref={(el) => (line1 = el)} className="line">
+    <p ref={(el) => (line1 = el)}>
       A Simple example using{' '}
       <a
         href="https://greensock.com/gsap/"
