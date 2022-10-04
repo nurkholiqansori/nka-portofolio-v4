@@ -6,13 +6,13 @@ import { createTheme } from "@arwes/design"
 type Props = {}
 
 const NavMenu = (props: Props) => {
+    const [activate, setActivate] = useState(true)
     const animatorGeneral = { duration: { enter: 200, exit: 200 } };
   
   return (
     <>
         <AnimatorGeneralProvider animator={animatorGeneral}>
-          <FrameUnderline animator={{ activate: true }} hover>
-            NAVMENU
+          <FrameUnderline>
             <div style={{ width: 200, height: 50 }} />
           </FrameUnderline>
         </AnimatorGeneralProvider>

@@ -1,5 +1,5 @@
 import React from 'react'
-import allIcons from "simple-icons"
+import * as allIcons from "simple-icons/icons"
 import { motion } from "framer-motion"
 import { css } from "@emotion/css"
 import { createTheme } from "@arwes/design"
@@ -27,9 +27,9 @@ const Layout = ({ children }: Props) => {
   }
 
   const iconSlugs = [
-    { title: "github", link: "https://github.com/nurkholiqansori" },
-    { title: "linkedin", link: "https://www.linkedin.com/in/nurkholiqansori" },
-    { title: "sololearn", link: "https://www.sololearn.com/profile/3200321" },
+    { title: "github", link: "https://github.com/nurkholiqansori", icon: allIcons.siGithub },
+    { title: "linkedin", link: "https://www.linkedin.com/in/nurkholiqansori", icon: allIcons.siLinkedin },
+    { title: "sololearn", link: "https://www.sololearn.com/profile/3200321", icon: allIcons.siSololearn },
   ]
 
   return (
@@ -43,18 +43,16 @@ const Layout = ({ children }: Props) => {
           gap: "10px",
         })}
       >
-        {iconSlugs.map((slug: { title: string; link: string }, i: number) => {
-          const data = allIcons.Get(slug?.title)
-
+        {iconSlugs.map((slug: { title: string; link: string, icon: { path: string } }, i: number) => {
           return (
             <a
+              key={i}
               href={slug.link}
               title={slug?.title}
               rel="noopener"
               target="_blank"
             >
               <div
-                key={i}
                 className={css({
                   padding: "5px 10px",
                   cursor: "pointer",
@@ -74,7 +72,7 @@ const Layout = ({ children }: Props) => {
                   })}
                 >
                   <motion.path
-                    d={data?.path}
+                    d={slug.icon.path}
                     variants={icon}
                     initial="hidden"
                     animate="visible"

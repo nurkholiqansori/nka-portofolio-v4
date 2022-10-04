@@ -14,13 +14,13 @@
     "@emotion/css": "11",
     "@emotion/react": "11",
     "animejs": "3",
-    "framer-motion": "^7.5.1",
+    "framer-motion": "6",
     "gsap": "^3.11.2",
     "howler": "2.2",
     "next": "latest",
     "polished": "4",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "17",
+    "react-dom": "17",
     "react-transition-group": "^4.4.5",
     "simple-icons": "^7.13.0"
   },
@@ -28,8 +28,8 @@
     "@types/animejs": "3",
     "@types/howler": "2.2",
     "@types/node": "18.7.23",
-    "@types/react": "^18.0.21",
-    "@types/react-dom": "^18.0.6",
+    "@types/react": "17",
+    "@types/react-dom": "17",
     "typescript": "^4.8.4"
   }
 }
