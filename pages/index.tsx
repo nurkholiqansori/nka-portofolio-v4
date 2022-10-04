@@ -47,96 +47,106 @@ function App() {
 
   return (
     <>
-    <Layout>
-      {/* 1 */}
-      <main className={css({ 
-        height: "100vh",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center"
-       })}>
-        <CSSTransition
-          in={true}
-          timeout={1200}
-          classNames="page"
-          onExit={onExit}
-          onEntering={onEnter}
-          unmountOnExit
+      <Layout>
+        {/* 1 */}
+        <main
+          className={css({
+            height: "100vh",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+          })}
         >
-          <Home />
-        </CSSTransition>
-      </main>
+          <CSSTransition
+            in={true}
+            timeout={1200}
+            classNames="page"
+            onExit={onExit}
+            onEntering={onEnter}
+            unmountOnExit
+          >
+            <Home />
+          </CSSTransition>
+        </main>
 
-      {/* 2 */}
-      <main>
-        <CSSTransition
-          in={true}
-          timeout={1200}
-          classNames="page"
-          onExit={onExit}
-          onEntering={onEnter}
-          unmountOnExit
+        {/* 2 */}
+        <main
+          className={css({
+            height: "100vh",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+          })}
         >
-          <DescriptionPage />
-        </CSSTransition>
-      </main>
+          <CSSTransition
+            in={true}
+            timeout={1200}
+            classNames="page"
+            onExit={onExit}
+            onEntering={onEnter}
+            unmountOnExit
+          >
+            <DescriptionPage />
+          </CSSTransition>
+        </main>
 
-      {/* 3 */}
-      <main>
-        <CSSTransition
-          in={true}
-          timeout={1200}
-          classNames="page"
-          onExit={onExit}
-          onEntering={onEnter}
-          unmountOnExit
-        >
-          <PortofolioPage />
-        </CSSTransition>
-      </main>
+        {/* 3 */}
+        <main>
+          <CSSTransition
+            in={true}
+            timeout={1200}
+            classNames="page"
+            onExit={onExit}
+            onEntering={onEnter}
+            unmountOnExit
+          >
+            <PortofolioPage />
+          </CSSTransition>
+        </main>
 
-      {/* 4 */}
-      <main>
-        <CSSTransition
-          in={true}
-          timeout={1200}
-          classNames="page"
-          onExit={onExit}
-          onEntering={onEnter}
-          unmountOnExit
-        >
-          <PrivateProjectPage />
-        </CSSTransition>
-      </main>
+        {/* 4 */}
+        <main>
+          <CSSTransition
+            in={true}
+            timeout={1200}
+            classNames="page"
+            onExit={onExit}
+            onEntering={onEnter}
+            unmountOnExit
+          >
+            <PrivateProjectPage />
+          </CSSTransition>
+        </main>
 
-      {/* 5 */}
-      <main>
-        <CSSTransition
-          in={true}
-          timeout={1200}
-          classNames="page"
-          onExit={onExit}
-          onEntering={onEnter}
-          unmountOnExit
-        >
-          <CertificatePage />
-        </CSSTransition>
-      </main>
+        {/* 5 */}
+        <main>
+          <CSSTransition
+            in={true}
+            timeout={1200}
+            classNames="page"
+            onExit={onExit}
+            onEntering={onEnter}
+            unmountOnExit
+          >
+            <CertificatePage />
+          </CSSTransition>
+        </main>
 
-      {/* 6 */}
-      <main>
-        <CSSTransition
-          in={true}
-          timeout={1200}
-          classNames="page"
-          onExit={onExit}
-          onEntering={onEnter}
-          unmountOnExit
-        >
-          <BlogPage />
-        </CSSTransition>
-      </main>
+        {/* 6 */}
+        <main>
+          <CSSTransition
+            in={true}
+            timeout={1200}
+            classNames="page"
+            onExit={onExit}
+            onEntering={onEnter}
+            unmountOnExit
+          >
+            <BlogPage />
+          </CSSTransition>
+        </main>
       </Layout>
     </>
   )

@@ -21,8 +21,10 @@
     "polished": "4",
     "react": "17",
     "react-dom": "17",
+    "react-intersection-observer-hook": "^2.0.4",
     "react-transition-group": "^4.4.5",
-    "simple-icons": "^7.13.0"
+    "simple-icons": "^7.13.0",
+    "styled-components": "^5.3.6"
   },
   "devDependencies": {
     "@types/animejs": "3",
