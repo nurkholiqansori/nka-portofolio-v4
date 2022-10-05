@@ -25,16 +25,25 @@ const DescriptionPage = (props: Props) => {
           className={css({
             display: "flex",
             gap: "30px",
+            alignItems: "center",
           })}
         >
           <img
             className={css({
               width: "300px",
+              borderLeft: "1px solid rgb(0 248 248)",
             })}
             src="https://playground.arwes.dev/assets/images/wallpaper.jpg"
           />
-          <div>
+          <div
+            className={css({
+              maxWidth: 500,
+            })}
+          >
             <Text as="h2">{data.myName}</Text>
+            <Text as="p" style={{ textAlign: "justify" }}>
+              {data.description}
+            </Text>
           </div>
         </div>
       </AnimatorGeneralProvider>

@@ -5,9 +5,6 @@ const Home = () => {
   return (
     <>
       <Title lineContent="Portofolio of" lineContent2="Nur kholiq Ansori" />
-      {/* <div>
-        <Content />
-      </div> */}
     </>
   )
 }

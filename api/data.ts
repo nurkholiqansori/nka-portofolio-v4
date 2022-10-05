@@ -49,7 +49,7 @@ export const data = {
     },
   ],
 
-  description: "I have loved the internet since middle school. I've finished HTML and CSS for just a month in my third year of middle school and always get high marks in computer lessons. I love the world of the internet and technology. I've been a part time worker in several agencies as a wordpress developer. I usually use ReactJS and NextJS and also tried React Native. I used to make a company profile web. You can find me on my website. I study on SoloLearn, Youtube, Google and Stackoverflow. I'm currently learning ReactNative, TypeScript, FullStack NextJS, Firebase and Headless CMS such as GhostCMS.",
+  description: "I've been a part time worker in several agencies as a wordpress developer. I usually use ReactJS and NextJS to make a company profile web. You can find me on my LinkedIn. I study on SoloLearn, Youtube, Google and Stackoverflow. I'm currently learning TypeScript, FullStack NextJS, Firebase and Headless CMS such as GhostCMS.",
 
   experience: [
     {

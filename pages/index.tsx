@@ -8,6 +8,8 @@ import PrivateProjectPage from "../components/PrivateProject.page"
 import CertificatePage from "../components/Certificate.page"
 import BlogPage from "../components/Blog.page"
 import Layout from "../components/Layout"
+import type { NextPage } from "next"
+import { ReactElement } from "react"
 
 function App() {
   const onEnter = (node) => {
@@ -93,7 +95,15 @@ function App() {
         </main>
 
         {/* 3 */}
-        <main>
+        <main
+          className={css({
+            height: "100vh",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+          })}
+        >
           <CSSTransition
             in={true}
             timeout={1200}
