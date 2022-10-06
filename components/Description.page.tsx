@@ -21,31 +21,29 @@ const DescriptionPage = (props: Props) => {
   return (
     <>
       <AnimatorGeneralProvider animator={animatorGeneral}>
-        <div
-          className={css({
-            display: "flex",
-            gap: "30px",
-            alignItems: "center",
-          })}
+        <Card
+          image={{
+            src: "https://playground.arwes.dev/assets/images/wallpaper.jpg",
+            alt: "Profil " + data.myName,
+          }}
+          landscape
+          style={{
+            maxWidth: "60rem"
+          }}
         >
-          <img
+          <Text
+            as="h1"
             className={css({
-              width: "300px",
-              borderLeft: "1px solid rgb(0 248 248)",
-            })}
-            src="https://playground.arwes.dev/assets/images/wallpaper.jpg"
-          />
-          <div
-            className={css({
-              maxWidth: 500,
+              marginRight: 10,
             })}
           >
-            <Text as="h2">{data.myName}</Text>
-            <Text as="p" style={{ textAlign: "justify" }}>
-              {data.description}
-            </Text>
-          </div>
-        </div>
+            About
+          </Text>
+          <Text as="p">{data.myName}</Text>
+          <Text as="p" style={{ textAlign: "justify" }}>
+            {data.description}
+          </Text>
+        </Card>
       </AnimatorGeneralProvider>
     </>
   )

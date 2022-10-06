@@ -1,3 +1,5 @@
+import * as allIcons from "simple-icons/icons"
+
 export const data = {
   myName: 'NUR KHOLIQ ANSORI',
   birthPlace: 'Bekasi, 25 April 2001',
@@ -5,13 +7,6 @@ export const data = {
   contact: [
     {
       id: 1,
-      name: '+6285156421261',
-      color: '000000',
-      link: 'tel:+6285156421261',
-      path: 'M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z',
-    },
-    {
-      id: 2,
       name: 'nurkholiqansori8@gmail.com',
       color: '000000',
       link: 'mailto:nurkholiqansori8@gmail.com',
@@ -24,28 +19,18 @@ export const data = {
       name: 'LinkedIn',
       color: '0A66C2',
       link: 'http://www.linkedin.com/in/nurkholiqansori',
-      path: 'M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z',
     },
     {
       id: 2,
       name: 'Github',
       color: '181717',
       link: 'https://github.com/nurkholiqansori',
-      path: 'M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12',
     },
     {
       id: 3,
       name: 'Sololearn',
       color: '149EF2',
       link: 'https://www.sololearn.com/profile/3200321',
-      path: 'M18.621 16.084a8.483 8.483 0 0 1-2.922 6.427c-.603.53-.19 1.522.613 1.442a9.039 9.039 0 0 0 1.587-.3 8.32 8.32 0 0 0 5.787-5.887 8.555 8.555 0 0 0-8.258-10.832 9.012 9.012 0 0 0-1.045.06c-.794.1-.995 1.161-.29 1.542 2.701 1.452 4.53 4.285 4.53 7.548zM7.906 18.597a8.538 8.538 0 0 1-6.45-2.913c-.532-.6-1.527-.19-1.446.61a8.943 8.943 0 0 0 .3 1.582c.794 2.823 3.064 5.026 5.907 5.766 5.727 1.492 10.87-2.773 10.87-8.229 0-.35-.02-.7-.06-1.04-.1-.792-1.165-.992-1.547-.29a8.597 8.597 0 0 1-7.574 4.514zM5.382 7.916a8.483 8.483 0 0 1 2.924-6.427c.603-.531.19-1.522-.613-1.442a9.93 9.93 0 0 0-1.598.29A8.339 8.339 0 0 0 .31 6.224a8.555 8.555 0 0 0 8.258 10.832c.352 0 .704-.02 1.045-.06.794-.1.995-1.162.29-1.542a8.54 8.541 0 0 1-4.52-7.538zm10.72-2.513a8.538 8.538 0 0 1 6.45 2.913c.53.6 1.526.19 1.445-.61a8.945 8.945 0 0 0-.3-1.583C22.902 3.3 20.632 1.098 17.788.357 12.071-1.145 6.928 3.12 6.928 8.576c0 .35.02.7.06 1.041.1.791 1.168.991 1.549.29A8.58 8.58 0 0 1 16.1 5.404z',
-    },
-    {
-      id: 4,
-      name: 'My Website',
-      color: '000000',
-      link: 'https://www.nurkholiqansori.me',
-      path: 'M24 22.525H0l12-21.05 12 21.05z',
     },
   ],
 
@@ -61,7 +46,7 @@ export const data = {
       address: 'https://www.jasapembuatanwebsitebekasi.net/',
       logo: '/doc/Logo/jasapembuatanwebsitebekasi.png',
       img: '/doc/jasapembuatanwebsitebekasi..png',
-      build: 'wordpress',
+      build: allIcons.siWordpress,
     },
     {
       id: 7,
@@ -72,7 +57,7 @@ export const data = {
       address: 'https://www.karuniakitchensetbekasi.com/',
       logo: '/doc/Logo/karuniakitchenset.png',
       img: '/doc/karuniakitchensetbekasi.png',
-      build: 'wordpress',
+      build: allIcons.siWordpress,
     },
     {
       id: 5,
@@ -83,7 +68,7 @@ export const data = {
       address: 'https://www.mitraboltingrental.com/',
       logo: '/doc/Logo/mitrajavasinergi.png',
       img: '/doc/mitraboltingrental.png',
-      build: 'wordpress',
+      build: allIcons.siWordpress,
     },
     {
       id: 4,
@@ -94,7 +79,7 @@ export const data = {
       address: 'https://www.jasasedotwc-medan.com',
       logo: '/doc/Logo/sedotwc.png',
       img: '/doc/jasasedotwc.png',
-      build: 'wordpress',
+      build: allIcons.siWordpress,
     },
     {
       id: 3,
@@ -105,7 +90,7 @@ export const data = {
       address: 'https://www.yassin.or.id',
       logo: '/doc/Logo/yassin.png',
       img: '/doc/yassin.png',
-      build: 'wordpress',
+      build: allIcons.siWordpress,
     },
     {
       id: 2,
@@ -116,7 +101,7 @@ export const data = {
       address: 'https://smafgputrifds.sch.id',
       logo: '/doc/Logo/smafgputri.png',
       img: '/doc/smafgputrifds.png',
-      build: 'wordpress',
+      build: allIcons.siWordpress,
     },
     {
       id: 1,
@@ -127,7 +112,7 @@ export const data = {
       address: 'https://talimyabat.id',
       logo: '/doc/Logo/At-Talimy.png',
       img: '/doc/talimyabat.png',
-      build: 'wordpress',
+      build: allIcons.siWordpress,
     },
   ],
   study: [
@@ -136,12 +121,6 @@ export const data = {
       title: 'Bachelor Degree of Computer Science',
       sch: 'Mitra Karya University',
       date: 'Aug 2019 until Present',
-    },
-    {
-      id: 2,
-      title: 'IPS',
-      sch: 'SMAN 8 Bekasi',
-      date: '2016 until 2019',
     },
   ],
   personalProjects: [
@@ -162,13 +141,13 @@ export const data = {
       repo: 'https://github.com/nurkholiqansori/simpleGalleryMyAnimeList',
       build: [
         {
-          name: 'nextjs',
+          name: allIcons.siNextdotjs,
         },
         {
-          name: 'styledcomponents',
+          name: allIcons.siStyledcomponents,
         },
         {
-          name: 'materialui'
+          name: allIcons.siMui
         },
       ],
     },
@@ -181,10 +160,10 @@ export const data = {
       repo: 'https://github.com/nurkholiqansori/myProfile',
       build: [
         {
-          name: 'nextjs',
+          name: allIcons.siNextdotjs,
         },
         {
-          name: 'tailwindcss'
+          name: allIcons.siTailwindcss
         }
       ]
     },
@@ -197,13 +176,13 @@ export const data = {
       repo: 'https://github.com/nurkholiqansori/myProfile',
       build: [
         {
-          name: 'html5'
+          name: allIcons.siHtml5
         },
         {
-          name: 'css3'
+          name: allIcons.siCss3
         },
         {
-          name: 'javascript'
+          name: allIcons.siJavascript
         }
       ]
     },
@@ -216,13 +195,13 @@ export const data = {
       repo: 'https://github.com/nurkholiqansori/MERN-Lecturer',
       build: [
         {
-          name: 'nextjs'
+          name: allIcons.siNextdotjs
         },
         {
-          name: 'typescript'
+          name: allIcons.siTypescript
         },
         {
-          name: 'tailwindcss'
+          name: allIcons.siTailwindcss
         },
       ],
     },
@@ -235,22 +214,22 @@ export const data = {
       repo: 'https://github.com/nurkholiqansori/MERN-Lecturer',
       build: [
         {
-          name: 'reactjs'
+          name: allIcons.siReact
         },
         {
-          name: 'express'
+          name: allIcons.siExpress
         },
         {
-          name: 'tailwindcss'
+          name: allIcons.siTailwindcss
         },
         {
-          name: 'reactrouterdom'
+          name: allIcons.siReactrouter
         },
         {
-          name: 'mongodb'
+          name: allIcons.siMongodb
         },
         {
-          name: 'nodejs'
+          name: allIcons.siNodedotjs
         }
       ],
     },

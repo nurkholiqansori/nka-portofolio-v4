@@ -101,7 +101,7 @@ function App() {
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
-            alignItems: "center",
+            // alignItems: "center",
           })}
         >
           <CSSTransition
@@ -117,7 +117,15 @@ function App() {
         </main>
 
         {/* 4 */}
-        <main>
+        <main
+          className={css({
+            height: "100vh",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            // alignItems: "center",
+          })}
+        >
           <CSSTransition
             in={true}
             timeout={1200}
