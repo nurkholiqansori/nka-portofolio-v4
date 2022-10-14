@@ -3,6 +3,7 @@ import { css } from '@emotion/css'
 import React from 'react'
 import { data } from '../api/data'
 import { motion } from "framer-motion"
+import { useMediaQuery } from "react-responsive"
 
 type Props = {}
 
@@ -21,29 +22,20 @@ const PrivateProjectPage = (props: Props) => {
     },
   }
 
+  const isDesktopOrLaptop = useMediaQuery({
+    minWidth: "640px",
+  })
+
   return (
     <>
-      <div
-        className={css({
-          display: "flex",
-          gap: "30px",
-          // maxWidth: "90vw",
-          maxHeight: "600px",
-          overflowX: "scroll",
-          // overflowY: "visible",
-          margin: "0rem 5rem",
-          // padding: "1rem"
-        })}
-      >
+      <div className="flex overflow-x-scroll max-w-7xl mx-auto space-x-4 pb-5 snap-x">
         {data.personalProjects.map((project, i) => (
           <Card
             image={{ src: project.img, alt: project.title }}
-            // style={{ minWidth: "35%", paddingBottom: "-200px" }}
-            // className={css({
-            //   minWidth: "40%",
-            //   overflow: "visible",
-            //   height: "500px",
-            // })}
+            style={{
+              minWidth: isDesktopOrLaptop ? 400 : "100%",
+              scrollSnapAlign: "center",
+            }}
             title={
               project?.title.length > 30
                 ? project?.title.slice(0, 30) + "..."
@@ -63,31 +55,33 @@ const PrivateProjectPage = (props: Props) => {
               </a>
             }
           >
-            <>
+            <div className="h-32">
               <Text>Develop at {project.date}</Text>
               <br />
               <Text>Build with:</Text>
               <br />
-              {project.build.map((build, i) => ( <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                className={css({
-                  width: "1.5rem",
-                  overflow: "visible",
-                })}
-              >
-                <motion.path
-                  d={build.name.path}
-                  variants={icon}
-                  initial="hidden"
-                  animate="visible"
-                  transition={{
-                    default: { duration: 3, ease: "easeInOut" },
-                    pathLength: { duration: 8, ease: "easeInOut" },
-                  }}
-                />
-              </svg>))}
-            </>
+              {project.build.map((build, i) => (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  className={css({
+                    width: "1.5rem",
+                    overflow: "visible",
+                  })}
+                >
+                  <motion.path
+                    d={build.name.path}
+                    variants={icon}
+                    initial="hidden"
+                    animate="visible"
+                    transition={{
+                      default: { duration: 3, ease: "easeInOut" },
+                      pathLength: { duration: 8, ease: "easeInOut" },
+                    }}
+                  />
+                </svg>
+              ))}
+            </div>
           </Card>
         ))}
       </div>
