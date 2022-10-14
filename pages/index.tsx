@@ -72,7 +72,7 @@ function App() {
         </main>
 
         {/* 2 */}
-        <main className="min-h-screen pt-20">
+        <main className="min-h-screen pt-20 px-10">
           <TitleComponents>Description</TitleComponents>
           <CSSTransition
             in={true}
@@ -87,7 +87,7 @@ function App() {
         </main>
 
         {/* 3 */}
-        <main className="min-h-screen pt-20">
+        <main className="min-h-screen pt-20 px-10">
           <TitleComponents>Portofolio WordPress</TitleComponents>
           <CSSTransition
             in={true}
@@ -102,7 +102,7 @@ function App() {
         </main>
 
         {/* 4 */}
-        <main className="min-h-screen pt-20">
+        <main className="min-h-screen pt-20 px-10">
           <TitleComponents>Portofolio</TitleComponents>
           <CSSTransition
             in={true}
@@ -117,7 +117,7 @@ function App() {
         </main>
 
         {/* 5 */}
-        <main className="min-h-screen pt-20">
+        <main className="min-h-screen pt-20 px-10">
           <TitleComponents>Certificate</TitleComponents>
           <CSSTransition
             in={true}
@@ -132,7 +132,7 @@ function App() {
         </main>
 
         {/* 6 */}
-        <main className="min-h-screen pt-20">
+        <main className="min-h-screen pt-20 px-10">
           <TitleComponents>Blog</TitleComponents>
           <CSSTransition
             in={true}

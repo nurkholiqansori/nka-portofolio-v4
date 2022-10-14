@@ -39,11 +39,11 @@ const PrivateProjectPage = (props: Props) => {
           <Card
             image={{ src: project.img, alt: project.title }}
             // style={{ minWidth: "35%", paddingBottom: "-200px" }}
-            className={css({
-              minWidth: "40%",
-              overflow: "visible",
-              height: "500px",
-            })}
+            // className={css({
+            //   minWidth: "40%",
+            //   overflow: "visible",
+            //   height: "500px",
+            // })}
             title={
               project?.title.length > 30
                 ? project?.title.slice(0, 30) + "..."

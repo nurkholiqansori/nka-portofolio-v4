@@ -2,6 +2,7 @@ import { Button, Card, Text } from "@arwes/core"
 import { css } from "@emotion/css"
 import { data } from "../api/data"
 import { motion } from "framer-motion"
+import { useMediaQuery } from "react-responsive"
 
 type Props = {}
 
@@ -19,34 +20,18 @@ const PortofolioPage = (props: Props) => {
     },
   }
 
+  const isDesktopOrLaptop = useMediaQuery({
+    minWidth: "640px",
+  })
+
   return (
     <>
-      <div
-        className={css({
-          display: "flex",
-          gap: "30px",
-          // maxWidth: "90vw",
-          maxHeight: "600px",
-          overflowX: "scroll",
-          // overflowY: "visible",
-          margin: "0rem 5rem",
-          // padding: "1rem"
-        })}
-      >
+      <div className="flex overflow-x-scroll max-w-7xl mx-auto space-x-4 pb-5">
         {data.experience.map((project, i) => (
           <Card
             image={{ src: project.img, alt: project.com }}
-            // style={{ minWidth: "35%", paddingBottom: "-200px" }}
-            className={css({
-              minWidth: "40%",
-              overflow: "visible",
-              height: "500px",
-            })}
-            title={
-              project?.com.length > 30
-                ? project?.com.slice(0, 30) + "..."
-                : project?.com
-            }
+            style={{ minWidth: isDesktopOrLaptop ? 400 : "100%" }}
+            title={project?.com}
             key={i}
             options={
               <a
@@ -61,11 +46,11 @@ const PortofolioPage = (props: Props) => {
               </a>
             }
           >
-            <>
-              <Text>Develop at {project.date}</Text>
+            <div className="h-32">
+              <Text as="p">Develop at {project.date}</Text>
               <br />
               <Text>Build with:</Text>
-              <br/>
+              <br />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -85,7 +70,7 @@ const PortofolioPage = (props: Props) => {
                   }}
                 />
               </svg>
-            </>
+            </div>
           </Card>
         ))}
       </div>
