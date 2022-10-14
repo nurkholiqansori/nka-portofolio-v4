@@ -41,6 +41,7 @@ const Layout = ({ children }: Props) => {
           left: 50,
           display: "flex",
           gap: "10px",
+          zIndex: 99
         })}
       >
         {iconSlugs.map((slug: { title: string; link: string, icon: { path: string } }, i: number) => {

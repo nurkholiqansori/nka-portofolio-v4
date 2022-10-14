@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react"
 import { CSSTransition } from "react-transition-group"
 import { gsap } from "gsap"
 import Home from "../components/Home.page"
@@ -9,6 +10,7 @@ import CertificatePage from "../components/Certificate.page"
 import BlogPage from "../components/Blog.page"
 import Layout from "../components/Layout"
 import TitleComponents from "../components/TitleComponents"
+import { useHeading } from "../utils/useHeading"
 
 function App() {
   const onEnter = (node) => {
@@ -40,11 +42,7 @@ function App() {
     )
   }
 
-  const containerCSS = css({
-    boxSizing: "border-box",
-    width: 300,
-    height: 200,
-  })
+  const headings = useHeading()
 
   return (
     <>
@@ -73,7 +71,7 @@ function App() {
 
         {/* 2 */}
         <main className="min-h-screen pt-20 px-10">
-          <TitleComponents>Description</TitleComponents>
+          <TitleComponents id="description">Description</TitleComponents>
           <CSSTransition
             in={true}
             timeout={1200}
@@ -88,7 +86,7 @@ function App() {
 
         {/* 3 */}
         <main className="min-h-screen pt-20 px-10">
-          <TitleComponents>Portofolio WordPress</TitleComponents>
+          <TitleComponents id="portofolio-wp">Portofolio WordPress</TitleComponents>
           <CSSTransition
             in={true}
             timeout={1200}
@@ -103,7 +101,7 @@ function App() {
 
         {/* 4 */}
         <main className="min-h-screen pt-20 px-10">
-          <TitleComponents>Portofolio</TitleComponents>
+          <TitleComponents id="portofolio">Portofolio</TitleComponents>
           <CSSTransition
             in={true}
             timeout={1200}
@@ -118,7 +116,7 @@ function App() {
 
         {/* 5 */}
         <main className="min-h-screen pt-20 px-10">
-          <TitleComponents>Certificate</TitleComponents>
+          <TitleComponents id="certificate">Certificate</TitleComponents>
           <CSSTransition
             in={true}
             timeout={1200}
@@ -133,7 +131,7 @@ function App() {
 
         {/* 6 */}
         <main className="min-h-screen pt-20 px-10">
-          <TitleComponents>Blog</TitleComponents>
+          <TitleComponents id="blog">Blog</TitleComponents>
           <CSSTransition
             in={true}
             timeout={1200}

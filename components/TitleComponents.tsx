@@ -2,14 +2,15 @@ import { Text } from '@arwes/core'
 import React from 'react'
 
 type Props = {
-  children: string
+  children: string,
+  id: string
 }
 
-const TitleComponents = ({ children }: Props) => {
+const TitleComponents = ({ children, id }: Props) => {
   return (
-    <div className="w-full text-center mb-10">
-      <Text as="h2" className="">
-        {children}
+    <div className="w-full text-center mb-10" id={id}>
+      <Text as="div">
+        <h2 id={id}>{children}</h2>
       </Text>
     </div>
   )
