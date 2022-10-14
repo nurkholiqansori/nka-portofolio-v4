@@ -697,7 +697,7 @@ glob-parent@^6.0.2:
   dependencies:
     is-glob "^4.0.3"
 
-gsap@^3.11.2:
+gsap@^3.11.3:
   version "3.11.3"
   resolved "https://registry.yarnpkg.com/gsap/-/gsap-3.11.3.tgz#ca5be827f56fe8d5720e08343390f74fb89a05f3"
   integrity sha512-xc/iIJy+LWiMbRa4IdMtdnnKa/7PXEK6NNzV71gdOYUVeTZN7UWnLU0fB7Hi1iwiz4ZZoYkBZPPYGg+2+zzFHA==
@@ -1036,6 +1036,13 @@ react-dom@17:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     scheduler "^0.20.2"
+
+react-gsap@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/react-gsap/-/react-gsap-3.2.1.tgz#15c7a0e06c4cdda6ac36ccfcd49f58ba6c3cfbc5"
+  integrity sha512-IX6XiN1a74hmU385yNZAYV1cFe3/Xmbg8eT99VCjmz7yzQq1qIsR47gkX5rkWeml9KmyEgiIzqArYaipPkKIbw==
+  dependencies:
+    react-is "^16.13.1"
 
 react-is@^16.13.1, react-is@^16.7.0:
   version "16.13.1"
