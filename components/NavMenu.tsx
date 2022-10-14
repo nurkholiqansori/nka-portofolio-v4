@@ -51,6 +51,7 @@ const NavMenu = (props: Props) => {
           {headings.map((heading: { id: string; text: string }, i: number) => (
             <ul
               style={{ listStyle: "none" }}
+              key={i}
               // className="marker:content-[''] -ml-7"
             >
               {/* //   <li>

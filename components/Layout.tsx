@@ -5,6 +5,7 @@ import { css } from "@emotion/css"
 import { createTheme } from "@arwes/design"
 import NavMenu from "./NavMenu"
 import { useMediaQuery } from "react-responsive"
+import NavMenuMobile from "./NavMenuMobile"
 
 type Props = {
   children: React.ReactNode
@@ -106,7 +107,7 @@ const Layout = ({ children }: Props) => {
           <NavMenu />
         </div>
       ) : (
-        ""
+        <NavMenuMobile />
       )}
     </>
   )
