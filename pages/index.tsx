@@ -8,8 +8,7 @@ import PrivateProjectPage from "../components/PrivateProject.page"
 import CertificatePage from "../components/Certificate.page"
 import BlogPage from "../components/Blog.page"
 import Layout from "../components/Layout"
-import type { NextPage } from "next"
-import { ReactElement } from "react"
+import TitleComponents from "../components/TitleComponents"
 
 function App() {
   const onEnter = (node) => {
@@ -73,15 +72,8 @@ function App() {
         </main>
 
         {/* 2 */}
-        <main
-          className={css({
-            height: "100vh",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-          })}
-        >
+        <main className="min-h-screen pt-20">
+          <TitleComponents>Description</TitleComponents>
           <CSSTransition
             in={true}
             timeout={1200}
@@ -95,15 +87,8 @@ function App() {
         </main>
 
         {/* 3 */}
-        <main
-          className={css({
-            height: "100vh",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            // alignItems: "center",
-          })}
-        >
+        <main className="min-h-screen pt-20">
+          <TitleComponents>Portofolio WordPress</TitleComponents>
           <CSSTransition
             in={true}
             timeout={1200}
@@ -117,15 +102,8 @@ function App() {
         </main>
 
         {/* 4 */}
-        <main
-          className={css({
-            height: "100vh",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            // alignItems: "center",
-          })}
-        >
+        <main className="min-h-screen pt-20">
+          <TitleComponents>Portofolio</TitleComponents>
           <CSSTransition
             in={true}
             timeout={1200}
@@ -139,7 +117,8 @@ function App() {
         </main>
 
         {/* 5 */}
-        <main>
+        <main className="min-h-screen pt-20">
+          <TitleComponents>Certificate</TitleComponents>
           <CSSTransition
             in={true}
             timeout={1200}
@@ -153,7 +132,8 @@ function App() {
         </main>
 
         {/* 6 */}
-        <main>
+        <main className="min-h-screen pt-20">
+          <TitleComponents>Blog</TitleComponents>
           <CSSTransition
             in={true}
             timeout={1200}

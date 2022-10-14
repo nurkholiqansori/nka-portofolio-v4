@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react"
 import { useIntersectionObserver } from "react-intersection-observer-hook"
 import { css } from "@emotion/css"
 import { data } from "../api/data"
+import { margin } from "polished"
 
 type Props = {}
 
@@ -19,7 +20,7 @@ const DescriptionPage = (props: Props) => {
   }, [isVisible])
 
   return (
-    <>
+    <div className="mx-auto w-full">
       <AnimatorGeneralProvider animator={animatorGeneral}>
         <Card
           image={{
@@ -28,24 +29,18 @@ const DescriptionPage = (props: Props) => {
           }}
           landscape
           style={{
-            maxWidth: "60rem"
+            maxWidth: "60rem",
+            marginLeft: "auto",
+            marginRight: "auto",
           }}
         >
-          <Text
-            as="h1"
-            className={css({
-              marginRight: 10,
-            })}
-          >
-            About
-          </Text>
           <Text as="p">{data.myName}</Text>
           <Text as="p" style={{ textAlign: "justify" }}>
             {data.description}
           </Text>
         </Card>
       </AnimatorGeneralProvider>
-    </>
+    </div>
   )
 }
 

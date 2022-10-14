@@ -21,14 +21,6 @@ const PortofolioPage = (props: Props) => {
 
   return (
     <>
-      <Text
-        as="h1"
-        className={css({
-          margin: "5rem 0 0 5rem",
-        })}
-      >
-        Projects
-      </Text>
       <div
         className={css({
           display: "flex",
