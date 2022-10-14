@@ -1,16 +1,16 @@
-import React from 'react'
+import React from "react"
 import * as allIcons from "simple-icons/icons"
 import { motion } from "framer-motion"
 import { css } from "@emotion/css"
 import { createTheme } from "@arwes/design"
-import NavMenu from './NavMenu'
+import NavMenu from "./NavMenu"
+import { useMediaQuery } from "react-responsive"
 
 type Props = {
   children: React.ReactNode
 }
 
 const Layout = ({ children }: Props) => {
-
   const theme = createTheme()
 
   const icon = {
@@ -27,79 +27,87 @@ const Layout = ({ children }: Props) => {
   }
 
   const iconSlugs = [
-    { title: "github", link: "https://github.com/nurkholiqansori", icon: allIcons.siGithub },
-    { title: "linkedin", link: "https://www.linkedin.com/in/nurkholiqansori", icon: allIcons.siLinkedin },
-    { title: "sololearn", link: "https://www.sololearn.com/profile/3200321", icon: allIcons.siSololearn },
+    {
+      title: "github",
+      link: "https://github.com/nurkholiqansori",
+      icon: allIcons.siGithub,
+    },
+    {
+      title: "linkedin",
+      link: "https://www.linkedin.com/in/nurkholiqansori",
+      icon: allIcons.siLinkedin,
+    },
+    {
+      title: "sololearn",
+      link: "https://www.sololearn.com/profile/3200321",
+      icon: allIcons.siSololearn,
+    },
   ]
+
+  const isDesktopOrLaptop = useMediaQuery({
+    minWidth: "768px",
+  })
 
   return (
     <>
-      <div
-        className={css({
-          position: "fixed",
-          top: 50,
-          left: 50,
-          display: "flex",
-          gap: "10px",
-          zIndex: 99
-        })}
-      >
-        {iconSlugs.map((slug: { title: string; link: string, icon: { path: string } }, i: number) => {
-          return (
-            <a
-              key={i}
-              href={slug.link}
-              title={slug?.title}
-              rel="noopener"
-              target="_blank"
-            >
-              <div
-                className={css({
-                  padding: "5px 10px",
-                  cursor: "pointer",
-
-                  "&:hover path": {
-                    fill: "rgba(0, 248, 248, 1)",
-                    transition: "all .5s linear",
-                  },
-                })}
+      <div className="fixed md:top-12 top-5 md:left-12 left-5 flex gap-2 z-50">
+        {iconSlugs.map(
+          (
+            slug: { title: string; link: string; icon: { path: string } },
+            i: number,
+          ) => {
+            return (
+              <a
+                key={i}
+                href={slug.link}
+                title={slug?.title}
+                rel="noopener"
+                target="_blank"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
+                <div
                   className={css({
-                    width: "2rem",
-                    overflow: "visible",
+                    padding: "5px 10px",
+                    cursor: "pointer",
+
+                    "&:hover path": {
+                      fill: "rgba(0, 248, 248, 1)",
+                      transition: "all .5s linear",
+                    },
                   })}
                 >
-                  <motion.path
-                    d={slug.icon.path}
-                    variants={icon}
-                    initial="hidden"
-                    animate="visible"
-                    transition={{
-                      default: { duration: 3, ease: "easeInOut" },
-                      pathLength: { duration: 8, ease: "easeInOut" },
-                    }}
-                  />
-                </svg>
-              </div>
-            </a>
-          )
-        })}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    className={css({
+                      width: isDesktopOrLaptop ? "2rem" : "1.4rem",
+                      overflow: "visible",
+                    })}
+                  >
+                    <motion.path
+                      d={slug.icon.path}
+                      variants={icon}
+                      initial="hidden"
+                      animate="visible"
+                      transition={{
+                        default: { duration: 3, ease: "easeInOut" },
+                        pathLength: { duration: 8, ease: "easeInOut" },
+                      }}
+                    />
+                  </svg>
+                </div>
+              </a>
+            )
+          },
+        )}
       </div>
       <div>{children}</div>
-      <div
-        className={css({
-          position: "fixed",
-          bottom: 60,
-          left: 60,
-          display: "flex",
-          gap: "10px",
-        })}
-      >
-        <NavMenu />
-      </div>
+      {isDesktopOrLaptop ? (
+        <div className="fixed bottom-14 left-14 flex gap-2">
+          <NavMenu />
+        </div>
+      ) : (
+        ""
+      )}
     </>
   )
 }
