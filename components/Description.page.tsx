@@ -30,6 +30,8 @@ const DescriptionPage = (props: Props) => {
     minWidth: "768px",
   })
 
+  console.log(isDesktopOrLaptop)
+
   return (
     <div className="mx-auto w-full">
       <AnimatorGeneralProvider animator={animatorGeneral}>

@@ -26,11 +26,14 @@ const PortofolioPage = (props: Props) => {
 
   return (
     <>
-      <div className="flex overflow-x-scroll max-w-7xl mx-auto space-x-4 pb-5">
+      <div className="flex overflow-x-scroll max-w-7xl mx-auto space-x-4 pb-5 snap-x">
         {data.experience.map((project, i) => (
           <Card
             image={{ src: project.img, alt: project.com }}
-            style={{ minWidth: isDesktopOrLaptop ? 400 : "100%" }}
+            style={{
+              minWidth: isDesktopOrLaptop ? 400 : "100%",
+              scrollSnapAlign: "center",
+            }}
             title={project?.com}
             key={i}
             options={
