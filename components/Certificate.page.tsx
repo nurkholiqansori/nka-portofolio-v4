@@ -41,7 +41,7 @@ const CertificatePage = (props: Props) => {
   return (
     <>
       <div className="flex overflow-x-scroll max-w-7xl mx-auto space-x-4 pb-5 snap-x">
-        {data.skill.map((cert, i) => (
+        {data.skill.reverse().map((cert, i) => (
           <Card
             key={i}
             title={cert.title}

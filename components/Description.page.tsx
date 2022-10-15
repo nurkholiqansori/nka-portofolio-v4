@@ -28,7 +28,7 @@ const DescriptionPage = (props: Props) => {
           }}
         >
           <Text as="p">{data.myName}</Text>
-          <Text as="p" style={{ textAlign: "justify" }}>
+          <Text as="div" style={{ textAlign: "justify" }}>
             {data.description}
           </Text>
         </Card>
