@@ -4,6 +4,7 @@ import React from 'react'
 import { data } from '../api/data'
 import { motion } from "framer-motion"
 import { useMediaQuery } from "react-responsive"
+import Total from './Total'
 
 type Props = {}
 
@@ -60,31 +61,34 @@ const PrivateProjectPage = (props: Props) => {
               <br />
               <Text>Build with:</Text>
               <br />
-              {project.build.map((build, i) => (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  className={css({
-                    width: "1.5rem",
-                    overflow: "visible",
-                  })}
-                >
-                  <motion.path
-                    d={build.name.path}
-                    variants={icon}
-                    initial="hidden"
-                    animate="visible"
-                    transition={{
-                      default: { duration: 3, ease: "easeInOut" },
-                      pathLength: { duration: 8, ease: "easeInOut" },
-                    }}
-                  />
-                </svg>
-              ))}
+              <div className="flex gap-5 flex-wrap mt-1">
+                {project.build.map((build, i) => (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    className={css({
+                      width: "1.5rem",
+                      overflow: "visible",
+                    })}
+                  >
+                    <motion.path
+                      d={build.name.path}
+                      variants={icon}
+                      initial="hidden"
+                      animate="visible"
+                      transition={{
+                        default: { duration: 3, ease: "easeInOut" },
+                        pathLength: { duration: 8, ease: "easeInOut" },
+                      }}
+                    />
+                  </svg>
+                ))}
+              </div>
             </div>
           </Card>
         ))}
       </div>
+      <Total>{`Total ${data.personalProjects.length}`}</Total>
     </>
   )
 }

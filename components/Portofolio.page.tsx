@@ -3,6 +3,7 @@ import { css } from "@emotion/css"
 import { data } from "../api/data"
 import { motion } from "framer-motion"
 import { useMediaQuery } from "react-responsive"
+import Total from "./Total"
 
 type Props = {}
 
@@ -49,34 +50,13 @@ const PortofolioPage = (props: Props) => {
               </a>
             }
           >
-            <div className="h-32">
+            <div className="h-24">
               <Text as="p">Develop at {project.date}</Text>
-              <br />
-              <Text>Build with:</Text>
-              <br />
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                className={css({
-                  width: "1rem",
-                  overflow: "visible",
-                })}
-              >
-                <motion.path
-                  d={project.build.path}
-                  variants={icon}
-                  initial="hidden"
-                  animate="visible"
-                  transition={{
-                    default: { duration: 3, ease: "easeInOut" },
-                    pathLength: { duration: 8, ease: "easeInOut" },
-                  }}
-                />
-              </svg>
             </div>
           </Card>
         ))}
       </div>
+      <Total>{`Total ${data.experience.length}`}</Total>
     </>
   )
 }
