@@ -4,6 +4,7 @@ import { FrameUnderline, Text, List } from "@arwes/core"
 import { useHeading } from "../utils/useHeading"
 // import { motion } from "framer-motion"
 import { Tween } from "react-gsap"
+import { useScrollSpy } from "../utils/useScrollSpy"
 
 type Props = {}
 
@@ -12,6 +13,10 @@ const NavMenu = (props: Props) => {
   const animatorGeneral = { duration: { enter: 200, exit: 200 } }
 
   const headings = useHeading()
+  const activeId = useScrollSpy(
+    headings.map(({ id }) => id),
+    { rootMargin: "0% 0% -25% 0%" },
+  )
 
   return (
     <>
@@ -61,7 +66,7 @@ const NavMenu = (props: Props) => {
                 //   </li> */}
 
               <li style={{ marginBottom: -10 }}>
-                <a href={`#${heading.id}`}>
+                <a href={`#${heading.id}`} className={activeId === heading.text && "text-[#7efcf6]"}>
                   <Text>{heading.text}</Text>
                 </a>
               </li>

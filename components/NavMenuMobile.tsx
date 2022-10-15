@@ -1,5 +1,5 @@
-import React from 'react'
 import { useHeading } from '../utils/useHeading'
+import { useScrollSpy } from '../utils/useScrollSpy'
 
 const data = [
   {
@@ -58,6 +58,10 @@ type Props = {}
 
 const NavMenuMobile = (props: Props) => {
   const headings = useHeading()
+  const activeId = useScrollSpy(
+    headings.map(({ id }) => id),
+    { rootMargin: "0% 0% -25% 0%" },
+  )
 
   const mixedHeadings = headings.map((heading) => {
     return {
@@ -70,20 +74,28 @@ const NavMenuMobile = (props: Props) => {
   return (
     <>
       <nav className="fixed bottom-0 left-0 right-0 border-t-2 border-[#7efcf6] p-5 flex gap-2 justify-between bg-[#7efcf6] bg-opacity-10 backdrop-blur-sm">
-        {mixedHeadings.map((heading: { id: string, text: string, icon: JSX.Element }, i) => (
-          <a href={`#${heading.id}`} key={i} className="hover:color-[#7efcf6]">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-6 h-6"
+        {mixedHeadings.map(
+          (heading: { id: string; text: string; icon: JSX.Element }, i) => (
+            <a
+              href={`#${heading.id}`}
+              key={i}
+              className={`hover:color-[#7efcf6] ${
+                activeId === heading.text && "text-[#7efcf6]"
+              }`}
             >
-              {heading.icon}
-            </svg>
-          </a>
-        ))}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                {heading.icon}
+              </svg>
+            </a>
+          ),
+        )}
       </nav>
     </>
   )
