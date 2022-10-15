@@ -17,7 +17,7 @@ const DescriptionPage = (props: Props) => {
       <AnimatorGeneralProvider animator={animatorGeneral}>
         <Card
           image={{
-            src: "https://playground.arwes.dev/assets/images/wallpaper.jpg",
+            src: "./mypic.png",
             alt: "Profil " + data.myName,
           }}
           landscape={isDesktopOrLaptop}

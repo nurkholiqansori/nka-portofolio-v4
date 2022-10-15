@@ -3,6 +3,7 @@ Allow: /
 
 User-agent: Googlebot-Image
 Disallow: /doc/
+Disallow: /mypic.png
 
 User-agent: *
 Allow: /
