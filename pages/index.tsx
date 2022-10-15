@@ -57,6 +57,7 @@ function App() {
           <TitleComponents id="blog">Blog</TitleComponents>
           <BlogPage />
         </main>
+
       </Layout>
     </>
   )
