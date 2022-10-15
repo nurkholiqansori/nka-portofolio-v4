@@ -67,13 +67,13 @@ const CertificatePage = (props: Props) => {
                 <div className="flex gap-2">
                   {iconProvider
                     .filter((it) => cert.company === it.name)
-                    .map((it) => (
+                    .map((it, i) => (
                       <svg
                         fill="#7efcf6"
                         viewBox="0 0 24 24"
                         fontSize="20"
                         className="w-5 h-5"
-                        key={it.name}
+                        key={i}
                       >
                         <path
                           strokeLinecap="round"

@@ -38,81 +38,127 @@ export const data = {
 
   experience: [
     {
-      id: 7,
+      title: "Web Developer",
+      com: "Borderline Visualization",
+      date: "Oct 2022",
+      address: "https://borderlinevisualization.com/",
+      img: "/doc/borderlinevisualization.com.png"
+    },
+    {
+      title: "Web Developer",
+      com: "Dinas Koperasi, Usaha Kecil dan Menengah Kab. Aceh Tengah",
+      date: "Oct 2022",
+      address: "https://dinkopukmacehtengah.com/",
+      img: "/doc/dinkopukmacehtengah.com.png"
+    },
+    {
+      title: "Web Developer",
+      com: "Shake Shock Sandwich",
+      date: "Sep 2022",
+      address: "https://shakeshocksandwich.com/",
+      img: "/doc/shakeshocksandwich.com.png"
+    },
+    {
+      title: "Web Developer",
+      com: "Intercounbix",
+      date: "Sep 2022",
+      address: "https://www.intercounbix.com/",
+      img: "/doc/intercounbix.com.png"
+    },
+    {
+      title: "Web Developer",
+      com: "MSA Mitra Service",
+      date: "Sep 2022",
+      address: "https://msamitraservice.com/",
+      img: "/doc/msamitraservice.com.png"
+    },
+    {
+      title: "Web Developer",
+      com: "FAZ Management",
+      date: "Sep 2022",
+      status: "From Freelance",
+      address: "https://fazmanagement.com/",
+      img: "/doc/fazmanagement.com.png"
+    },
+    {
+      title: "Web Developer",
+      com: "PT. Sedaya Karya Binangun (SKB)",
+      date: "May 2022",
+      status: "From Freelance",
+      address: "https://sedayakaryabinangun.com/",
+      img: "/doc/sedayakaryabinangun.com.png"
+    },
+    {
+      title: "Web Developer",
+      com: "PT SCINDODATA",
+      date: "Jun 2022",
+      status: "From Freelance",
+      address: "https://scindodata.com/",
+      img: "/doc/scindodata.com.png",
+    },
+    {
+      title: "Web Developer",
+      com: "Ayou Mizzura Official®",
+      date: "Jun 2022",
+      status: "From Freelance",
+      address: "https://www.ayoumizzura.com/",
+      img: "/doc/ayoumizzura.com.png"
+    },
+    {
       title: 'Web Developer',
       com: 'Jasa Pembuatan Website Bekasi',
       date: 'Jan 2022',
       status: 'From Internship',
       address: 'https://www.jasapembuatanwebsitebekasi.net/',
-      logo: '/doc/Logo/jasapembuatanwebsitebekasi.png',
       img: '/doc/jasapembuatanwebsitebekasi..png',
-      build: allIcons.siWordpress,
     },
     {
-      id: 7,
       title: 'Web Developer',
       com: 'Karunia Kitchen Set',
-      date: 'Des 2021',
+      date: 'Dec 2021',
       status: 'From Intership',
       address: 'https://www.karuniakitchensetbekasi.com/',
-      logo: '/doc/Logo/karuniakitchenset.png',
       img: '/doc/karuniakitchensetbekasi.png',
-      build: allIcons.siWordpress,
     },
     {
-      id: 5,
       title: 'Web Developer',
       com: 'Mitra Java Sinergi',
-      date: 'Des 2021',
+      date: 'Dec 2021',
       status: 'From Intership',
       address: 'https://www.mitraboltingrental.com/',
-      logo: '/doc/Logo/mitrajavasinergi.png',
       img: '/doc/mitraboltingrental.png',
-      build: allIcons.siWordpress,
     },
     {
-      id: 4,
       title: 'Web Developer',
       com: 'Jasa Sedot WC Medan',
-      date: 'Okt 2021',
+      date: 'Oct 2021',
       status: 'From Intership',
       address: 'https://www.jasasedotwc-medan.com',
-      logo: '/doc/Logo/sedotwc.png',
       img: '/doc/jasasedotwc.png',
-      build: allIcons.siWordpress,
     },
     {
-      id: 3,
       title: 'Web Developer',
       com: 'YASSIN',
-      date: 'Okt 2021',
-      status: 'Freelance',
+      date: 'Oct 2021',
+      status: 'From Freelance',
       address: 'https://www.yassin.or.id',
-      logo: '/doc/Logo/yassin.png',
       img: '/doc/yassin.png',
-      build: allIcons.siWordpress,
     },
     {
-      id: 2,
       title: 'Web Developer',
       com: 'SMA FG Putri FDS',
-      date: 'Agu 2021',
-      status: 'Freelance',
+      date: 'Aug 2021',
+      status: 'From Freelance',
       address: 'https://smafgputrifds.sch.id',
-      logo: '/doc/Logo/smafgputri.png',
       img: '/doc/smafgputrifds.png',
-      build: allIcons.siWordpress,
     },
     {
-      id: 1,
       title: 'Web Developer',
       com: 'Ta\’limy Ali bin Abi Thalib',
-      date: 'Sep 2020 hingga Mar 2021',
-      status: 'Freelance',
+      date: 'Mar 2021',
+      status: 'From Freelance',
       address: 'https://talimyabat.id',
-      logo: '/doc/Logo/At-Talimy.png',
       img: '/doc/talimyabat.png',
-      build: allIcons.siWordpress,
     },
   ],
   study: [
@@ -124,16 +170,31 @@ export const data = {
     },
   ],
   personalProjects: [
-    // {
-    //   id: 6,
-    //   title: 'MERN (Mongo Express.js React.js Node.js) Course',
-    //   address: 'https://mern-lecturer.vercel.app/',
-    //   img: '/doc/project/mern.png',
-    //   date: 'Mar. 2022',
-    //   repo: 'https://github.com/nurkholiqansori/MERN-Lecturer'
-    // },
     {
-      id: 5,
+      title: 'Raja Mahadewa Trading Company',
+      address: 'https://rmtradingcompany.com/',
+      img: '/doc/rmtradingcompany.com.png',
+      date: 'Oct 2022',
+      repo: '',
+      build: [
+        {
+          name: allIcons.siReact
+        },
+        {
+          name: allIcons.siReactrouter
+        },
+        {
+          name: allIcons.siI18next
+        },
+        {
+          name: allIcons.siTailwindcss
+        },
+        {
+          name: allIcons.siSimpleicons
+        }
+      ]
+    },
+    {
       title: 'MyAnimeList Gallery',
       address: 'https://simple-gallery-my-anime-list.vercel.app/',
       img: '/doc/project/anime.png',
@@ -152,7 +213,6 @@ export const data = {
       ],
     },
     {
-      id: 4,
       title: 'Personal Website v1',
       address: 'https://my-cv-new.vercel.app/',
       img: '/doc/project/nka-portofolio-v1.png',
@@ -168,7 +228,6 @@ export const data = {
       ]
     },
     {
-      id: 3,
       title: 'Final Project at NGOding BAReng (NGOBAR) workshop',
       address: 'http://nurkholiqansori.github.io/myProfile',
       img: '/doc/project/ngobar.png',
@@ -187,12 +246,11 @@ export const data = {
       ]
     },
     {
-      id: 2,
       title: 'Personal Website v2',
-      address: 'https://mern-lecturer.vercel.app/',
+      address: 'https://nka-portofolio.vercel.app/',
       img: '/doc/project/nka-portofolio-v2.png',
       date: 'Mar. 2022',
-      repo: 'https://github.com/nurkholiqansori/MERN-Lecturer',
+      repo: 'https://github.com/nurkholiqansori/nka-portofolio-v2',
       build: [
         {
           name: allIcons.siNextdotjs
@@ -206,7 +264,6 @@ export const data = {
       ],
     },
     {
-      id: 1,
       title: 'MERN (Mongo Express.js React.js Node.js) Lecturer',
       address: 'https://mern-lecturer.vercel.app/',
       img: '/doc/project/mern.png',

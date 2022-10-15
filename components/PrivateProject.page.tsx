@@ -63,25 +63,27 @@ const PrivateProjectPage = (props: Props) => {
               <br />
               <div className="flex gap-5 flex-wrap mt-1">
                 {project.build.map((build, i) => (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    className={css({
-                      width: "1.5rem",
-                      overflow: "visible",
-                    })}
-                  >
-                    <motion.path
-                      d={build.name.path}
-                      variants={icon}
-                      initial="hidden"
-                      animate="visible"
-                      transition={{
-                        default: { duration: 3, ease: "easeInOut" },
-                        pathLength: { duration: 8, ease: "easeInOut" },
-                      }}
-                    />
-                  </svg>
+                  <div key={i} title={build.name.title}>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      className={css({
+                        width: "1.5rem",
+                        overflow: "visible",
+                      })}
+                    >
+                      <motion.path
+                        d={build.name.path}
+                        variants={icon}
+                        initial="hidden"
+                        animate="visible"
+                        transition={{
+                          default: { duration: 3, ease: "easeInOut" },
+                          pathLength: { duration: 8, ease: "easeInOut" },
+                        }}
+                      />
+                    </svg>
+                  </div>
                 ))}
               </div>
             </div>
