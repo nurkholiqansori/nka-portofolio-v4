@@ -25,7 +25,7 @@ const BlogPage = ({ allPosts }: Props) => {
                     title={post.title}
                   >
                     <Button palette="secondary">
-                      <Text>Visit</Text>
+                      <Text>Read</Text>
                     </Button>
                   </a>
                 }
