@@ -8,8 +8,14 @@ import CertificatePage from "../components/Certificate.page"
 import BlogPage from "../components/Blog.page"
 import Layout from "../components/Layout"
 import TitleComponents from "../components/TitleComponents"
+import { getAllPosts } from "../lib/api"
+import PostType from "../interfaces/posts"
 
-function App() {
+type AppType = {
+  allPosts: PostType[]
+}
+
+function App({ allPosts }: AppType) {
   return (
     <>
       <Layout>
@@ -55,12 +61,27 @@ function App() {
         {/* 6 */}
         <main className="min-h-screen pt-20 px-10">
           <TitleComponents id="blog">Blog</TitleComponents>
-          <BlogPage />
+          <BlogPage allPosts={allPosts} />
         </main>
-
       </Layout>
     </>
   )
 }
 
 export default App
+
+export const getStaticProps = async() => {
+  const allPosts = getAllPosts([
+    'title',
+    'date',
+    'slug',
+    'coverImage',
+    'excerpt',
+  ])
+
+  return {
+    props: {
+      allPosts
+    }
+  }
+}

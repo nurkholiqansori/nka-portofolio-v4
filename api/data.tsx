@@ -15,22 +15,22 @@ export const data = {
   ],
   socMed: [
     {
-      id: 1,
-      name: "LinkedIn",
+      title: "LinkedIn",
       color: "0A66C2",
       link: "http://www.linkedin.com/in/nurkholiqansori",
+      icon: allIcons.siLinkedin,
     },
     {
-      id: 2,
-      name: "Github",
+      title: "Github",
       color: "181717",
       link: "https://github.com/nurkholiqansori",
+      icon: allIcons.siGithub,
     },
     {
-      id: 3,
-      name: "Sololearn",
+      title: "Sololearn",
       color: "149EF2",
       link: "https://www.sololearn.com/profile/3200321",
+      icon: allIcons.siSololearn,
     },
   ],
 
@@ -45,7 +45,8 @@ export const data = {
         rel="noopener noreferrer"
       >
         my LinkedIn
-      </a>{" and "}
+      </a>
+      {" and "}
       <a
         href="mailto:nka.bussiness@gmail.com"
         title="Gmail"

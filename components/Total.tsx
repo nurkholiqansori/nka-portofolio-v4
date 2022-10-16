@@ -1,9 +1,9 @@
 import { Text } from '@arwes/core'
-import React from 'react'
+import { ReactNode } from "react"
 import { data } from '../api/data'
 
 type Props = {
-  children: string | JSX.Element
+  children: string | ReactNode
 }
 
 const Total = ({ children }: Props) => {

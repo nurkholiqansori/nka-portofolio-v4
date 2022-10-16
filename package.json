@@ -14,7 +14,9 @@
     "@emotion/css": "11",
     "@emotion/react": "11",
     "animejs": "3",
+    "date-fns": "^2.29.3",
     "framer-motion": "6",
+    "gray-matter": "^4.0.3",
     "gsap": "^3.11.3",
     "howler": "2.2",
     "next": "latest",
@@ -24,6 +26,8 @@
     "react-dom": "17",
     "react-gsap": "^3.2.1",
     "react-responsive": "^9.0.0",
+    "remark": "^14.0.2",
+    "remark-html": "^15.0.1",
     "simple-icons": "^7.13.0"
   },
   "devDependencies": {

@@ -1,5 +1,6 @@
-import { useHeading } from '../utils/useHeading'
-import { useScrollSpy } from '../utils/useScrollSpy'
+import { ReactNode } from "react"
+import { useHeading } from "../utils/useHeading"
+import { useScrollSpy } from "../utils/useScrollSpy"
 
 const data = [
   {
@@ -67,7 +68,7 @@ const NavMenuMobile = (props: Props) => {
     return {
       id: heading.id,
       text: heading.text,
-      icon: data.filter((raw) => raw.id === heading.id)[0].icon
+      icon: data.filter((raw) => raw.id === heading.id)[0].icon,
     }
   })
 
@@ -75,7 +76,7 @@ const NavMenuMobile = (props: Props) => {
     <>
       <nav className="fixed bottom-0 left-0 right-0 border-t-2 border-[#7efcf6] p-5 flex gap-2 justify-between bg-[#7efcf6] bg-opacity-10 backdrop-blur-sm">
         {mixedHeadings.map(
-          (heading: { id: string; text: string; icon: JSX.Element }, i) => (
+          (heading: { id: string; text: string; icon: ReactNode }, i) => (
             <a
               href={`#${heading.id}`}
               key={i}

@@ -1,11 +1,11 @@
 import React from "react"
-import * as allIcons from "simple-icons/icons"
 import { motion } from "framer-motion"
 import { css } from "@emotion/css"
 import { createTheme } from "@arwes/design"
 import NavMenu from "./NavMenu"
 import { useMediaQuery } from "react-responsive"
 import NavMenuMobile from "./NavMenuMobile"
+import { data } from "../api/data"
 
 type Props = {
   children: React.ReactNode
@@ -27,24 +27,6 @@ const Layout = ({ children }: Props) => {
     },
   }
 
-  const iconSlugs = [
-    {
-      title: "github",
-      link: "https://github.com/nurkholiqansori",
-      icon: allIcons.siGithub,
-    },
-    {
-      title: "linkedin",
-      link: "https://www.linkedin.com/in/nurkholiqansori",
-      icon: allIcons.siLinkedin,
-    },
-    {
-      title: "sololearn",
-      link: "https://www.sololearn.com/profile/3200321",
-      icon: allIcons.siSololearn,
-    },
-  ]
-
   const isDesktopOrLaptop = useMediaQuery({
     minWidth: "768px",
   })
@@ -52,7 +34,7 @@ const Layout = ({ children }: Props) => {
   return (
     <>
       <div className="fixed md:top-12 top-5 md:left-12 left-5 flex gap-2 z-50">
-        {iconSlugs.map(
+        {data.socMed.map(
           (
             slug: { title: string; link: string; icon: { path: string } },
             i: number,
@@ -101,7 +83,7 @@ const Layout = ({ children }: Props) => {
           },
         )}
       </div>
-      <div>{children}</div>
+      <div className="mb-10">{children}</div>
       {isDesktopOrLaptop ? (
         <div className="fixed bottom-14 left-14 flex gap-2">
           <NavMenu />
