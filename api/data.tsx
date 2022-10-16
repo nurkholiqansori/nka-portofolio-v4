@@ -36,9 +36,9 @@ export const data = {
 
   description: (
     <>
-      I\'ve been a part time worker in several agencies as a wordpress
-      developer. I usually use ReactJS and NextJS to make a company profile web.
-      You can find me on{" "}
+      I've been a part time worker in several agencies as a wordpress developer.
+      I usually use ReactJS and NextJS to make a company profile web. You can
+      find me on{" "}
       <a
         href="http://www.linkedin.com/in/nurkholiqansori"
         title="LinkedIn"
@@ -53,10 +53,10 @@ export const data = {
         rel="noopener noreferrer"
       >
         my mail
-      </a>
-      . I study on SoloLearn, Youtube, Google and Stackoverflow. I'm currently
-      learning TypeScript, FullStack NextJS, Firebase and Headless CMS such as
-      GhostCMS. <br /> This Website build with{" "}
+      </a>{" "}
+      to contact me. I study on SoloLearn, Youtube, Google and Stackoverflow.
+      I'm currently learning TypeScript, FullStack NextJS, Firebase and Headless
+      CMS such as GhostCMS. <br /> This Website build with{" "}
       <a
         href="https://github.com/vercel/next.js/tree/canary/examples/with-typescript"
         title="Next.TS"
