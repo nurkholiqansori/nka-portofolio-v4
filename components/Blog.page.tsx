@@ -15,7 +15,7 @@ const BlogPage = ({ allPosts }: Props) => {
           </div>
         ) : (
           <div>
-            {allPosts.map((post, i) => (
+            {allPosts.map((post: PostType, i: number) => (
               <Card
                 image={{ src: post.coverImage, alt: post.title }}
                 title={post.title}

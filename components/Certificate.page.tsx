@@ -32,9 +32,7 @@ const iconProvider = [
   },
 ]
 
-type Props = {}
-
-const CertificatePage = (props: Props) => {
+const CertificatePage = () => {
   const isDesktopOrLaptop = useMediaQuery({
     minWidth: "640px",})
 

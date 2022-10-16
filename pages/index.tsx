@@ -10,6 +10,7 @@ import Layout from "../components/Layout"
 import TitleComponents from "../components/TitleComponents"
 import { getAllPosts } from "../lib/api"
 import PostType from "../interfaces/posts"
+import type { NextPage } from "next"
 
 type AppType = {
   allPosts: PostType[]

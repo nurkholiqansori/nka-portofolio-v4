@@ -1,9 +1,7 @@
 import { Text } from '@arwes/core'
-import React from 'react'
+import { NextPage } from 'next'
 
-type Props = {}
-
-const NotFound = (props: Props) => {
+const NotFound: NextPage = () => {
   return (
     <div className="w-screen h-screen flex justify-center items-center flex-col gap-2 ">
       <Text>Oops! You are lost in outer space</Text>

@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import { css } from "@emotion/css"
 import { createTheme } from "@arwes/design"
@@ -6,12 +6,15 @@ import NavMenu from "./NavMenu"
 import { useMediaQuery } from "react-responsive"
 import NavMenuMobile from "./NavMenuMobile"
 import { data } from "../api/data"
+import axios from "axios"
+import { format, parseISO } from "date-fns"
 
 type Props = {
   children: React.ReactNode
 }
 
 const Layout = ({ children }: Props) => {
+  const [lastUpdate, setLastUpdate] = useState<string | object>("")
   const theme = createTheme()
 
   const icon = {
@@ -30,6 +33,18 @@ const Layout = ({ children }: Props) => {
   const isDesktopOrLaptop = useMediaQuery({
     minWidth: "768px",
   })
+
+  useEffect(() => {
+    axios
+      .get(
+        "https://api.github.com/repos/nurkholiqansori/nka-portofolio-v4/branches/master",
+      )
+      .then((res) => {
+        const parseDate = parseISO(res.data?.commit.commit.author.date) 
+
+        setLastUpdate(format(parseDate, "LLLL d, yyyy"))
+      })
+  }, [])
 
   return (
     <>
@@ -83,7 +98,8 @@ const Layout = ({ children }: Props) => {
           },
         )}
       </div>
-      <div className="mb-10">{children}</div>
+      <div className="mb-5">{children}</div>
+      <div className="p-5 mb-16">Last Update at {lastUpdate}</div>
       {isDesktopOrLaptop ? (
         <div className="fixed bottom-14 left-14 flex gap-2">
           <NavMenu />

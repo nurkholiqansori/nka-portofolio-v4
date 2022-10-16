@@ -33,7 +33,8 @@ export const data = {
       icon: allIcons.siSololearn,
     },
   ],
-
+  // lastUpdate: axios
+  // https://api.github.com/repos/nurkholiqansori/nka-portofolio-v4/branches/master
   description: (
     <>
       I've been a part time worker in several agencies as a wordpress developer.
