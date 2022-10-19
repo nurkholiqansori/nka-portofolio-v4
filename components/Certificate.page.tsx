@@ -32,9 +32,14 @@ const iconProvider = [
   },
 ]
 
-const CertificatePage = () => {
+type Props = {
+  screen: boolean
+}
+
+const CertificatePage = ({ screen }: Props) => {
   const isDesktopOrLaptop = useMediaQuery({
-    minWidth: "640px",})
+    minWidth: "640px",
+  })
 
   return (
     <>
@@ -43,10 +48,7 @@ const CertificatePage = () => {
           <Card
             key={i}
             title={cert.title}
-            style={{
-              minWidth: isDesktopOrLaptop ? 400 : "100%",
-              scrollSnapAlign: "center",
-            }}
+            className="min-w-full md:min-w-[400px] snap-center opacity-40 hover:opacity-100"
             options={
               <a
                 href={cert.credential}

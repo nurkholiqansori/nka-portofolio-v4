@@ -1,16 +1,13 @@
 import { AnimatorGeneralProvider } from "@arwes/animation"
 import { Card, Text } from "@arwes/core"
 import { data } from "../api/data"
-import { useMediaQuery } from "react-responsive"
 
-type Props = {}
+type Props = {
+  screen: boolean
+}
 
-const DescriptionPage = (props: Props) => {
+const DescriptionPage = ({ screen }: Props) => {
   const animatorGeneral = { duration: { enter: 200, exit: 200, stagger: 30 } }
-
-  const isDesktopOrLaptop = useMediaQuery({
-    minWidth: "768px",
-  })
 
   return (
     <div className="mx-auto w-full">
@@ -20,12 +17,13 @@ const DescriptionPage = (props: Props) => {
             src: "./mypic.png",
             alt: "Profil " + data.myName,
           }}
-          landscape={isDesktopOrLaptop}
-          style={{
-            maxWidth: "60rem",
-            marginLeft: "auto",
-            marginRight: "auto",
-          }}
+          landscape={screen}
+          className="max-w-[60rem] mx-auto"
+          // style={{
+          //   maxWidth: "60rem",
+          //   marginLeft: "auto",
+          //   marginRight: "auto",
+          // }}
         >
           <Text as="p">{data.myName}</Text>
           <Text as="div" style={{ textAlign: "justify" }}>

@@ -1,15 +1,14 @@
 import { Button, Card, Text } from '@arwes/core'
 import { css } from '@emotion/css'
-import React from 'react'
 import { data } from '../api/data'
 import { motion } from "framer-motion"
-import { useMediaQuery } from "react-responsive"
 import Total from './Total'
 
-type Props = {}
+type Props = {
+  screen: boolean
+}
 
-const PrivateProjectPage = (props: Props) => {
-
+const PrivateProjectPage = ({ screen }: Props) => {
   const icon = {
     hidden: {
       opacity: 0,
@@ -23,20 +22,17 @@ const PrivateProjectPage = (props: Props) => {
     },
   }
 
-  const isDesktopOrLaptop = useMediaQuery({
-    minWidth: "640px",
-  })
-
   return (
     <>
       <div className="flex overflow-x-scroll max-w-7xl mx-auto space-x-4 pb-5 snap-x">
         {data.personalProjects.map((project, i) => (
           <Card
             image={{ src: project.img, alt: project.title }}
-            style={{
-              minWidth: isDesktopOrLaptop ? 400 : "100%",
-              scrollSnapAlign: "center",
-            }}
+            // style={{
+            //   minWidth: screen ? 400 : "100%",
+            //   scrollSnapAlign: "center",
+            // }}
+            className="min-w-full md:min-w-[400px] snap-center opacity-40 hover:opacity-100"
             title={
               project?.title.length > 30
                 ? project?.title.slice(0, 30) + "..."

@@ -98,7 +98,7 @@ const Layout = ({ children }: Props) => {
           },
         )}
       </div>
-      <div className="mb-5">{children}</div>
+      <div className="mb-5 snap-proximity snap-y">{children}</div>
       <div className="p-5 mb-16">Last Update at {lastUpdate}</div>
       {isDesktopOrLaptop ? (
         <div className="fixed bottom-14 left-14 flex gap-2">

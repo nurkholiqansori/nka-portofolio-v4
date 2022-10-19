@@ -10,60 +10,62 @@ import Layout from "../components/Layout"
 import TitleComponents from "../components/TitleComponents"
 import { getAllPosts } from "../lib/api"
 import PostType from "../interfaces/posts"
-import type { NextPage } from "next"
+import { useMediaQuery } from "react-responsive"
+import { useEffect, useState } from "react"
 
 type AppType = {
   allPosts: PostType[]
 }
 
+
 function App({ allPosts }: AppType) {
+  const [screen, setScreen] = useState<boolean>(true)
+  
+  const isDesktopOrLaptop = useMediaQuery({
+    minWidth: "768px",
+  })
+  useEffect(() => {
+    setScreen(isDesktopOrLaptop)
+  }, [isDesktopOrLaptop])
   return (
     <>
       <Layout>
         {/* 1 */}
-        <main
-          className={css({
-            height: "100vh",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-          })}
-        >
+        <section className="h-screen flex flex-col justify-center items-center snap-center">
           <Home />
-        </main>
+        </section>
 
         {/* 2 */}
-        <main className="min-h-screen pt-20 px-10">
+        <section className="min-h-screen pt-20 px-10 snap-center relative">
           <TitleComponents id="description">Description</TitleComponents>
-          <DescriptionPage />
-        </main>
+          <DescriptionPage screen={screen} />
+        </section>
 
         {/* 3 */}
-        <main className="min-h-screen pt-20 px-10">
+        <section className="min-h-screen pt-20 px-10 relative">
           <TitleComponents id="portofolio-wp">
             Portofolio WordPress
           </TitleComponents>
-          <PortofolioPage />
-        </main>
+          <PortofolioPage screen={screen} />
+        </section>
 
         {/* 4 */}
-        <main className="min-h-screen pt-20 px-10">
+        <section className="min-h-screen pt-20 px-10 relative">
           <TitleComponents id="portofolio">Portofolio</TitleComponents>
-          <PrivateProjectPage />
-        </main>
+          <PrivateProjectPage screen={screen} />
+        </section>
 
         {/* 5 */}
-        <main className="min-h-screen pt-20 px-10">
+        <section className="min-h-screen pt-20 px-10 relative">
           <TitleComponents id="certificate">Certificate</TitleComponents>
-          <CertificatePage />
-        </main>
+          <CertificatePage screen={screen} />
+        </section>
 
         {/* 6 */}
-        <main className="min-h-screen pt-20 px-10">
+        <section className="min-h-screen pt-20 px-10 relative">
           <TitleComponents id="blog">Blog</TitleComponents>
-          <BlogPage allPosts={allPosts} />
-        </main>
+          <BlogPage screen={screen} allPosts={allPosts} />
+        </section>
       </Layout>
     </>
   )
@@ -71,18 +73,18 @@ function App({ allPosts }: AppType) {
 
 export default App
 
-export const getStaticProps = async() => {
+export const getStaticProps = async () => {
   const allPosts = getAllPosts([
-    'title',
-    'date',
-    'slug',
-    'coverImage',
-    'excerpt',
+    "title",
+    "date",
+    "slug",
+    "coverImage",
+    "excerpt",
   ])
 
   return {
     props: {
-      allPosts
-    }
+      allPosts,
+    },
   }
 }

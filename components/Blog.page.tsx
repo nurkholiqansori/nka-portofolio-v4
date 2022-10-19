@@ -3,9 +3,10 @@ import PostType from "../interfaces/posts"
 
 type Props = {
   allPosts: PostType[]
+  screen: boolean
 }
 
-const BlogPage = ({ allPosts }: Props) => {
+const BlogPage = ({ allPosts, screen }: Props) => {
   return (
     <>
       <div className="flex overflow-x-auto max-w-7xl mx-auto space-x-4 pb-5 snap-x">
@@ -18,12 +19,14 @@ const BlogPage = ({ allPosts }: Props) => {
             {allPosts.map((post: PostType, i: number) => (
               <Card
                 image={{ src: post.coverImage, alt: post.title }}
+                // style={{
+                //   minWidth: screen ? 400 : "100%",
+                //   scrollSnapAlign: "center",
+                // }}
+                className="min-w-full md:min-w-[400px] snap-center"
                 title={post.title}
                 options={
-                  <a
-                    href={`posts/${post.slug}`}
-                    title={post.title}
-                  >
+                  <a href={`posts/${post.slug}`} title={post.title}>
                     <Button palette="secondary">
                       <Text>Read</Text>
                     </Button>
@@ -31,9 +34,7 @@ const BlogPage = ({ allPosts }: Props) => {
                 }
               >
                 <div className="h-24">
-                  <Text>
-                    {post.excerpt + "..."}
-                  </Text>
+                  <Text>{post.excerpt + "..."}</Text>
                 </div>
               </Card>
             ))}
